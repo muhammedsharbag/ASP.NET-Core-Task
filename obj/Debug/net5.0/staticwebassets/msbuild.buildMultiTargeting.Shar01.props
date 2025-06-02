@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Shar01.props" />
+</Project>

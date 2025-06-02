@@ -1,0 +1,40 @@
+﻿@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @* Strat Header *@
+    <nav class="mt-5">
+        <center>
+            <a asp-controller = "Home" asp-action = "Index" class="btn btn-primary">Home</a>
+            <a asp-controller = "Home" asp-action = "AboutUs" class="btn btn-warning">About Us</a>
+            <a asp-controller = "Home" asp-action = "Privacy" class="btn btn-success">Privacy</a>
+            <a asp-controller = "Home" asp-action = "ContactUs" class="btn btn-secondary">Contact Us</a>
+            <a asp-controller = "Account" asp-action = "Login" class="btn btn-danger">Login</a>
+            <a asp-controller = "Account" asp-action = "Register" class="btn btn-info">Register</a>
+        </center>
+    </nav>
+    @*  End Header  *@
+
+    @* Start Body *@
+    <div>
+        @RenderBody()
+    </div>
+    @*  End Body  *@
+
+    @* Start Footer *@
+    <footer class="mt-5">
+        <center>
+            <div>
+                <p>CopyRigths &copy; SharbagCo @DateTime.Now.Year</p>
+            </div>
+        </center>
+    </footer>
+    @*  End Footer  *@
+</body>
+</html>
